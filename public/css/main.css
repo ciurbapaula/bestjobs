@@ -1,0 +1,196 @@
+#tel{
+    color: #848484;
+    margin-top: 10px;
+    margin-right:50px ;
+}
+a:hover{
+
+    background-color: lightgrey;
+    color: #1264c6;
+    text-decoration: none;
+
+
+}
+
+#principalhead{
+
+    height: 50px;
+}
+#detali
+{
+ background-image: url( "https://ss.bestjobs.eu/img/landing/ppa/bg_hero_landing.png ");
+    left:0px;
+    right: 0px;
+    height: 300px;
+    width: 100%;
+    position: absolute;
+}
+#continua{
+    background:#6EA50C ;
+
+    border: 2px  #6EA50C ;
+    color: #FFFFFF;
+}
+
+
+
+
+.product-hihglight-img {
+    width: 250px;
+}
+#scris{
+
+
+    margin-top:1cm;
+    margin-left: 5cm ;
+}
+#man{
+
+   margin-left:850px;
+    margin-right:150px;
+ margin-top:-247px;
+
+}
+#continua{
+    height: 35px;
+    width: 125px;
+}
+#mybody{
+    background-color: #ffffff;
+   position: relative;
+    margin-top:270px;
+
+    width: 1000px;
+
+    margin-left: 200px;
+    margin-right: -100px;
+
+    border-radius: 4px;
+    -moz-box-shadow: 2px 7px 8px rgba(0, 0, 0,0.5);
+    -webkit-box-shadow: 2px 7px 8px rgba(0, 0, 0, .5);
+    box-shadow: 2px 7px 8px rgba(0, 0, 0, .5);
+
+
+
+
+
+}
+
+#row1col1{
+
+    margin-left:10%;
+    float:left;
+
+    width : 250px;
+
+}
+#row1col2{
+    margin-right:10%;
+
+    float: right;
+    width : 250px;
+
+}
+#row2col1{
+    margin-left:10%;
+ height: 370px;
+
+    width : 250px;
+}
+#row2col2{
+
+    margin-right:10%;
+    float:right;
+
+    width : 250px;
+
+    margin-left: 15%;
+
+
+}
+#row3col1{
+
+    width : 250px;
+
+    margin: 0 auto;
+
+
+
+}
+#cutie-jos {
+    margin-left: -15.5px;
+    width: 1000px;
+
+    margin-top: -18px;
+background-color: #F1F5FA;
+
+}
+#item6
+{
+
+    text-align: center;
+    width : 1000px;
+}
+
+
+#creareCont2
+{
+    margin:auto;
+
+    width:140px;
+    height:40px;
+
+    background:#6EA50C ;
+
+    border: 2px  #6EA50C ;
+    color: #FFFFFF;
+}
+#cutie-sus{
+
+
+
+    margin-left:-15.5px;
+    width:1000px;
+
+
+
+
+}
+#myfooter{
+
+    height:50px ;
+    width: 100%;
+    position: absolute;
+    display: block;
+    margin-left:0;
+    margin-bottom: 0px;
+    border-top: 1px solid #ddd;
+    text-align: center;
+    box-shadow: 0 -1px 1px rgba(0,0,0,0.05);
+    align-items: center;
+}
+#lang-selector{
+
+    height:60px;
+    width: 60px;
+    margin-top:-10px;
+}
+#mainbody{
+    width: 100%;
+}
+.mystyle{
+
+    height: 35px;
+    width: 125px;
+    font-family: "Open Sans",Helvetica,Arial,sans-serif;
+    font-size: 14px;
+    margin-right: 7px;
+  margin-bottom: 5px;
+}
+.social{
+
+    float :right;
+    margin-right: 10px;
+    margin-left: 15px;
+
+}

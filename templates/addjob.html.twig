@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title> Adauga job</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="/css/addmain.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body>
+<div class="header" id="jobhead">
+    <img src="https://ss.bestjobs.eu/img/bestjobs-logo.png" alt="bestjobs" class="img-responsive" style="height: 35px; width: 150px;" id="imghead">
+    <a href="/newjob"  id="adaugare" >
+        Adauga job
+    </a>
+
+    <br>
+
+
+    <div class="container m-t-lg">
+        {{ form_start(form) }}
+        <div class="row">
+            <div class="col-md-12 vreausadisparaasta">
+                {{ form_label(form.title) }}
+            </div>
+            <div class="col-md-12">
+                {{ form_widget(form.title, {'attr': {'class': 'col-md-12', 'required':false}}) }}
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 vreausadisparaasta">
+                {{ form_label(form.description) }}
+            </div>
+            <div class="col-md-12">
+                {{ form_widget(form.description, {'attr': {'class': 'col-md-12'}}) }}
+            </div>
+        </div>
+        {#<div class="row">#}
+            {#<div class="col-md-4">#}
+
+                {#<div class="row">#}
+                    {#<div class="col-md-12">#}
+                        {#{{ form_label(form.SalariuMin) }}#}
+                    {#</div>#}
+                    {#<div class="col-md-12">#}
+                        {#{{ form_widget(form.SalariuMin, {'type':'number', 'attr': {'class': 'col-md-12', 'placeholder': 'Aicibagi cati bani vrei minim'}}) }}#}
+                    {#</div>#}
+                {#</div>#}
+            {#</div>#}
+            {#<div class="col-md-4">#}
+                {#<div class="row">#}
+                    {#<div class="col-md-12">#}
+                        {#{{ form_label(form.SalariuMax) }}#}
+                    {#</div>#}
+                    {#<div class="col-md-12">#}
+                        {#{{ form_widget(form.SalariuMax, {'attr': {'class': 'col-md-12'}}) }}#}
+                    {#</div>#}
+
+                {#</div>#}
+            {#</div>#}
+
+
+        </div>
+        <div class="row">
+            <div class="col-md-2 offset-md-10">
+                <button class="btn btn-lg btn-success" id="butonuldesubmit" type="submit">Activeaza</button>
+            </div>
+
+        </div>
+
+
+        {{ form_end(form) }}
+    </div>
+    <script>
+       /* $(document).ready(function(){
+            $("#butonuldesubmit").click(function(){
+                $(".vreausadisparaasta").hide();
+            });
+        });*/
+    </script>
+
+
+
+</div>
+
+
+
+
+</body>
+</html>
