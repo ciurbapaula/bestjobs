@@ -5,21 +5,8 @@
 
 }
 #imghead{
+
     margin-top: 5px;
-}
-
-#adaugare{
-
-    background-color:#224D89; ;
-    text-decoration-color:lightgray;
-    color:lightgray;
-    margin-left:20px;
-    margin-bottom: -15px;
-
-}
-#formadd{
-    margin-top: 10px;
-    border: 0.5px solid lightgrey;
 }
 #myfooter{
 
@@ -33,7 +20,8 @@
     text-align: center;
     box-shadow: 0 -1px 1px rgba(0,0,0,0.05);
     align-items: center;
-   bottom:0;
+    bottom:0;
+
 }
 #lang-selector{
 
@@ -58,5 +46,28 @@
     float :right;
     margin-right: 10px;
     margin-left: 15px;
+
+}
+#key
+{
+    color: gray;
+
+    height: 35px;
+    margin-top: 5px;
+    width: 350px;
+}
+#cauta{
+
+
+    background-color: #6EA50C;
+    color: white;
+    border: 2px solid #6EA50C ;
+    height: 35px;
+    width:50px ;
+   margin-top:5px;
+}
+#search{
+    margin-left: 250px;
+    margin-top: -38px;
 
 }

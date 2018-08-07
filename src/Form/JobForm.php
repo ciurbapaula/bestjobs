@@ -23,6 +23,7 @@ class JobForm extends AbstractType
 
         $builder
             ->add('title', TextType::class)
+            ->add('locatie', TextType::class)
             ->add('description', TextareaType::class)
 //            ->add('SalariuMin', TextType::class, array(
 //                'required' => false,
@@ -34,7 +35,6 @@ class JobForm extends AbstractType
     public function configureOptions(OptionsResolver $resolver)
     {
         $resolver->setDefaults(array('data class'=>Job::class,));
-        dump($resolver);
     }
 
 

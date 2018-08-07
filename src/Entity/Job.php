@@ -24,6 +24,29 @@ class Job
      * @ORM\Column(type="string")
      */
     private $title;
+    /**
+     * @var string
+     *
+     * @ORM\Column(type="string")
+     */
+    private $locatie;
+
+    /**
+     * @return string
+     */
+    public function getLocatie()
+    {
+        return $this->locatie;
+    }
+
+    /**
+     * @param string $locatie
+     */
+    public function setLocatie(string $locatie): void
+    {
+        $this->locatie = $locatie;
+    }
+
 
     /**
      * @var string
@@ -37,9 +60,12 @@ class Job
      * @ORM\Column(type="string")
      */
     private $slug;
+
+
+
     public function __construct(){
 
-        $this->slug=5;
+        $this->slug=md5(1,99999);
     }
 
     /**
