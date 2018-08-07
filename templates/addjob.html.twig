@@ -28,7 +28,7 @@
     <div class="container m-t-lg" id="formadd">
         {{ form_start(form) }}
         <div class="row">
-            <div class="col-md-12 vreausadisparaasta">
+            <div class="col-md-12 ">
                 {{ form_label(form.title) }}
             </div>
             <div class="col-md-12">
@@ -36,7 +36,7 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-md-12 vreausadisparaasta">
+            <div class="col-md-12 ">
                 {{ form_label(form.description) }}
             </div>
             <div class="col-md-12">
@@ -44,9 +44,7 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-md-12 vreausadisparaasta">
-                {{ form_label(form.title) }}
-            </div>
+
             <div class="col-md-12">
                 {{ form_widget(form.title, {'attr': {'class': 'col-md-12', 'required':false}}) }}
             </div>

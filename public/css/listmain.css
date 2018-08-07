@@ -10,17 +10,32 @@
 }
 #myfooter{
 
-    height:50px ;
-    width: 100%;
-    position: absolute;
-    display: block;
-    margin-left:0;
-    margin-bottom: 0px;
+    /*height:50px ;*/
+    /*width: 100%;*/
+    /*position:fixed;*/
+    /*display: block;*/
+    /*margin-left:0;*/
+    /*margin-bottom: 0px;*/
+    /*border-top: 1px solid #ddd;*/
+    /*text-align: center;*/
+    /*box-shadow: 0 -1px 1px rgba(0,0,0,0.05);*/
+    /*align-items: center;*/
+    /*bottom:0;*/
+
     border-top: 1px solid #ddd;
     text-align: center;
-    box-shadow: 0 -1px 1px rgba(0,0,0,0.05);
     align-items: center;
-    bottom:0;
+    width: 100%;
+    height:60px;
+    background-color: white;
+    color: black;
+    margin-top:10px;
+
+    display:inline;
+    bottom : 0;
+    margin-left:0px;
+    margin-bottom: 0px;
+    position: fixed;
 
 }
 #lang-selector{
@@ -70,4 +85,24 @@
     margin-left: 250px;
     margin-top: -38px;
 
+}
+#myjobs{
+    border: 2px solid lightgray ;
+    margin-left:20px ;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    background-color: white;
+
+
+}
+#jobrow{
+    margin-left: 200px;
+    margin-right: -100px;
+    align-content: center;
+    align-self: center;
+
+}
+#listbody{
+    background-color:#F5F5F5;
 }

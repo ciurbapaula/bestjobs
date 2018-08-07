@@ -14,7 +14,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <link rel="icon" type="image/png" href="https://ss.bestjobs.eu/favicon-32x32.png" sizes="32x32">
 </head>
-<body>
+<body id="listbody">
 <div class="header" id="jobhead">
     <a href="{{ path('app_job_list') }}">
     <img src="https://ss.bestjobs.eu/img/bestjobs-logo.png" alt="bestjobs" class="img-responsive" style="height: 35px; width: 150px;" id="imghead">
@@ -27,14 +27,36 @@
     {#</form>#}
 
     {{ form_start(form, {'action': path('app_job_keyword', {'keyword' : keyword}), 'method': 'POST', 'attr': {'id':'search'}}) }}
-    {{ form_widget(form) }}
+
+    <div class="row">
+        <div class="col-md-2" id="searchbar">
+            {{ form_widget(form.keyword) }}
+
+        </div>
+
+        <div class="col-md-2 " id="searchbtn">
+            {{ form_widget(form.cauta)}}
+        </div>
+    </div>
     {{ form_end(form) }}
 </div>
 <br>
-    {% for job in jobs %}
-    <p>{{ job.title ~ ' - ' ~ job.description }}</p><br>
-    {% endfor %}
+<div class="container" id="jobrow" >
+<div  class="row"  >
+
+            {% for job in jobs %}
+                    <div class="col-md-3" id="myjobs" >
+                <h4 style="color: #1264c6">
+                    {{ job.title}}</h4><br> <p>{{ job.description }}</p><br>
+                        <p style="color: #AA3333"> Locatie: {{ job.locatie }}</p>
+                    </div>
+            {% endfor %}
+
+
 </div>
+</div>
+
+
 <div class="footer" class="full-width" id="myfooter"  >
 
     <div id="Sitemap" style="display: inline" class="mystyle">
