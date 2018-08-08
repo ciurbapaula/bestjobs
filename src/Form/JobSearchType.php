@@ -33,8 +33,10 @@ class JobSearchType  extends AbstractType
             [
                 'attr' => [
                     'id' => 'cauta',
-                    'icon' => 'fa fa-search',
+                    'class' => 'fa fa-search btn  btn-success ',
                 ],
+                'label' => false,
+
 
             ]);
     }

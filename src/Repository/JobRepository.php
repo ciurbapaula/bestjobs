@@ -32,7 +32,7 @@ class JobRepository extends ServiceEntityRepository
                     $qb->expr()->like('job.title', ':keyword'),
                     $qb->expr()->like('job.description', ':keyword')
                 )
-            )->setParameter('keyword', $keyword);
+            )->setParameter('keyword', '%'.$keyword.'%');
         }
         $qb->orderBy('job.id' , 'desc');
 

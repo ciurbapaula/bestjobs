@@ -18,6 +18,7 @@ use Symfony\Component\Form\Form;
 use Symfony\Component\Form\FormInterface;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpFoundation\Request;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Security;
 
 
 
@@ -25,6 +26,9 @@ use Symfony\Component\HttpFoundation\Request;
 class JobController extends Controller
 {
     /**
+     *
+     * @Security("has_role('ROLE_ADMIN')")
+     *
      * @Route("/newjob", name="newj")
      */
     public function addAction(Request $request)
