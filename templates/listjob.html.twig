@@ -1,198 +1,28 @@
-<!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/html">
-<head>
-    <meta charset="UTF-8">
-    <title>Locuri de munca
-       </title>
+{% extends 'base.html.twig' %}
+{% block body %}
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="/css/listmain.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <link rel="icon" type="image/png" href="https://ss.bestjobs.eu/favicon-32x32.png" sizes="32x32">
-</head>
-<body id="listbody">
-<div class="header" id="jobhead">
-    <a href="{{ path('app_job_list') }}">
-    <img src="https://ss.bestjobs.eu/img/bestjobs-logo.png" alt="bestjobs" class="img-responsive" style="height: 35px; width: 150px;" id="imghead">
-    </a>
-        {#<form id="search">#}
-        {#<input type="text" value="   Cuvant cheie" placeholder="Cuvant cheie" id="key">#}
-        {#<button  id="cauta" type="submit"><i class="fa fa-search"></i>#}
-         {#</button>#}
 
-    {#</form>#}
+    <div class="row" id="row">
 
-    {{ form_start(form, {'action': path('app_job_keyword', {'keyword' : keyword}), 'method': 'POST', 'attr': {'id':'search'}}) }}
+        {% for job in jobs %}
+            <div class="col-md-3" id="col-{{ loop.index }}">
 
-    <div class="row" id="therow">
-        <div class="col-md-2" id="searchbar">
-            {{ form_widget(form.keyword) }}
+                <div class="panel panel-default">
+                    <div class="panel-heading" style="color:darkslateblue;font-size:18px;"><b>{{ job.title }}</b></div>
+                    <div class="panel-body">
+                        <p  style="height: 70px; overflow: hidden">{{ job.description }}</p>
 
-        </div>
 
-        <div class="col-md-2 " id="searchbtn">
-          {{ form_widget(form.cauta) }}
-        </div>
-    </div>
-    {{ form_end(form) }}
-</div>
-<br>
-<div class="container" id="jobrow" >
-<div  class="row"  >
 
-            {% for job in jobs %}
-                    <div class="col-md-3" id="myjobs" style=" margin-bottom: 0">
-                <h4 style="color: #1264c6">
-                    {{ job.title}}</h4><br> <p>{{ job.description }}</p><br>
-                        <br>
-                        <p style="color: #AA3333 "  id="loc"> Locatie: {{ job.locatie }}</p>
                     </div>
-            {% endfor %}
+                    <div class="panel-footer" style="color:lightcoral"><i class="fas fa-map-marker-alt"></i> {{ job.locatie }}</div>
+                </div>
+            </div>
+        {% endfor %}
 
 
-</div>
-</div>
-<br>
-
-<div class="footer" class="full-width" id="myfooter"  >
-
-    <div id="Sitemap" style="display: inline" class="mystyle">
-
-        <a href="/ro/hartasite/joburi" class="text-muted">
-            Site map
-        </a>
-    </div>
-    <div id="Suport" style="display: inline" class="mystyle">
-        <a href="http://support.bestjobs.eu/hc/ro" target="_blank"
-           class="text-muted">Suport</a>
-    </div>
-    <div id="conditii" style="display: inline" class="mystyle">
-        <a href="/ro/legal/terms" class="text-muted">
-            Conditii
-        </a>
-    </div>
-    <div id="confidentialitate" style="display: inline" class="mystyle">
-        <a href="/ro/legal/confidentiality" class="text-muted">
-            Confidentialitate
-        </a>
-    </div>
-    <div id="about" style="display: inline" class="mystyle">
-        <a href="/ro/company/offer#About" class="text-muted"
-           onclick="$('.tab-link[href=\'#About\']', '#offerTypes').click()">
-            Despre noi
-        </a>
-    </div>
-    <div id="blog" style="display: inline" class="mystyle">
-        <a href="http://blog.bestjobs.eu/?lang=ro" target="_blank" class="text-muted">
-            Blog
-        </a>
     </div>
 
 
-    <div class="col-md-1 col-sm-2 col-xs-12 col-lg-1 text-lg-right text-center lang-links" id="lang-selector" data-locale="ro"
-         style="display: inline">
-        <div class="btn-group dropup">
-            <a href="#" class="btn navbar-btn dropdown-toggle text-muted" data-toggle="dropdown">
-                <img src="https://ss.bestjobs.eu/img/flags/ro.png" class="flag">
-                <small>RO</small>
-                <span class="caret"></span>
-            </a>
-            <ul class="dropdown-menu">
-                <li class="text-lg-left text-center">
-                    <a href="https://www.bestjobs.eu/en/landing/aplicanti-garantati" data-toggle="tooltip" data-placement="left"
-                       title="engleză">
-                        <img src="https://ss.bestjobs.eu/img/flags/en.png"
-                             class="flag">
-                        <small>EN</small>
-                    </a>
-                </li>
-                <li class="text-lg-left text-center">
-                    <a href="https://www.bestjobs.eu/pl/landing/aplicanti-garantati" data-toggle="tooltip" data-placement="left"
-                       title="poloneză">
-                        <img src="https://ss.bestjobs.eu/img/flags/pl.png"
-                             class="flag">
-                        <small>PL</small>
-                    </a>
-                </li>
-                <li class="text-lg-left text-center">
-                    <a href="https://www.bestjobs.eu/hu/landing/aplicanti-garantati" data-toggle="tooltip" data-placement="left"
-                       title="maghiară">
-                        <img src="https://ss.bestjobs.eu/img/flags/hu.png"
-                             class="flag">
-                        <small>HU</small>
-                    </a>
-                </li>
-                <li class="text-lg-left text-center">
-                    <a href="https://www.bestjobs.eu/it/landing/aplicanti-garantati" data-toggle="tooltip" data-placement="left"
-                       title="italiană">
-                        <img src="https://ss.bestjobs.eu/img/flags/it.png"
-                             class="flag">
-                        <small>IT</small>
-                    </a>
-                </li>
-                <li class="text-lg-left text-center">
-                    <a href="https://www.bestjobs.eu/de/landing/aplicanti-garantati" data-toggle="tooltip" data-placement="left"
-                       title="germană">
-                        <img src="https://ss.bestjobs.eu/img/flags/de.png"
-                             class="flag">
-                        <small>DE</small>
-                    </a>
-                </li>
-                <li class="text-lg-left text-center">
-                    <a href="https://www.bestjobs.eu/fr/landing/aplicanti-garantati" data-toggle="tooltip" data-placement="left"
-                       title="franceză">
-                        <img src="https://ss.bestjobs.eu/img/flags/fr.png"
-                             class="flag">
-                        <small>FR</small>
-                    </a>
-                </li>
-                <li class="text-lg-left text-center">
-                    <a href="https://www.bestjobs.eu/sr/landing/aplicanti-garantati" data-toggle="tooltip" data-placement="left"
-                       title="sârbă">
-                        <img src="https://ss.bestjobs.eu/img/flags/sr.png"
-                             class="flag">
-                        <small>SR</small>
-                    </a>
-                </li>
-                <li class="text-lg-left text-center">
-                    <a href="https://www.bestjobs.eu/es/landing/aplicanti-garantati" data-toggle="tooltip" data-placement="left"
-                       title="spaniolă">
-                        <img src="https://ss.bestjobs.eu/img/flags/es.png"
-                             class="flag">
-                        <small>ES</small>
-                    </a>
-                </li>
-            </ul>
-        </div>
-    </div>
-    <div class="social">
-        <Form name = "socialM" Method = "Post" >
 
-            <a href="http://twitter.com/BestJobsRo"  class="btn btn-twitter navbar-btn"
-               data-toggle="tooltip" title="" data-original-title="Urmareste-ne pe Twitter"
-               id="id_social_media_links">
-                <i class="fab fa-fw fa-lg fa-twitter"></i>
-            </a>
-            <a href="www.youtube.com/user/BestJobsRecrutare"target="_blank"
-               class="btn btn-youtube navbar-btn" data-toggle="tooltip" title=""
-               data-original-title="Urmareste-ne pe YouTube" id="id_social_media_links">
-                <i class="fab fa-fw fa-lg fa-youtube-square"></i>
-            </a>
-            <a href="www.facebook.com"id="facebook"target="_blank"
-               class="btn btn-facebook navbar-btn" data-toggle="tooltip" title=""
-               data-original-title="Urmareste-ne pe Facebook" id="id_social_media_links">
-                <i class="fab fa-fw fa-lg fa-facebook-square"></i>
-            </a>
-            <a href="wwww.linkedin.com" id="linkedin"target="_blank"
-               class="btn btn-linkedin navbar-btn" data-toggle="tooltip" title=""
-               data-original-title="Urmareste-ne pe Linkedin" id="id_social_media_links">
-                <i class="fab fa-fw fa-lg fa-linkedin"></i>
-            </a>
-        </Form>
-    </div>
-
-</div>
+{% endblock %}

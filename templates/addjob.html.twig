@@ -1,245 +1,63 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="UTF-8">
-    <title> Adauga job</title>
+{% extends 'base2.html.twig' %}
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css">
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="/css/addmain.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <link rel="icon" type="image/png" href="https://ss.bestjobs.eu/favicon-32x32.png" sizes="32x32">
-</head>
-<body>
-<div class="header" id="jobhead">
-    <img src="https://ss.bestjobs.eu/img/bestjobs-logo.png" alt="bestjobs" class="img-responsive" style="height: 35px; width: 150px;" id="imghead">
-    <a href="/newjob"  id="adaugare" >
-        Adauga job
-    </a>
 
-    <br>
+{% block body %}
 
- <br>
-    <br>
-</div>
 
-    <div class="container m-t-lg" id="formadd">
+    <div id="headerJob" class="header">
+
+        <div id ="image" class="image">
+            <img src="https://ss.bestjobs.eu/img/bestjobs-logo.png" alt="Bestjobs" id="logoBestJobs">
+        </div>
+        <div id="btn" class="btn">
+            <a href="/newjob" id = "jobs">
+                adauga job
+            </a>
+        </div>
+    </div>
+
+
+
+    <div class="container m-t-lg" id="form">
         {{ form_start(form) }}
         <div class="row">
-            <div class="col-md-12 ">
+            <div class="col-md-12">
                 {{ form_label(form.title) }}
             </div>
             <div class="col-md-12">
-                {{ form_widget(form.title, {'attr': {'class': 'col-md-12', 'required':false}}) }}
+                {{ form_widget(form.title, {'attr': {'class': 'col-md-12'}}) }}
             </div>
         </div>
         <div class="row">
-            <div class="col-md-12 ">
+            <div class="col-md-12">
                 {{ form_label(form.description) }}
             </div>
             <div class="col-md-12">
                 {{ form_widget(form.description, {'attr': {'class': 'col-md-12'}}) }}
             </div>
         </div>
-        <div class="row">
 
+
+        <div class="row">
             <div class="col-md-12">
-                {{ form_widget(form.title, {'attr': {'class': 'col-md-12', 'required':false}}) }}
+                {{ form_label(form.locatie) }}
+            </div>
+            <div class="col-md-12">
+                {{ form_widget(form.locatie, {'attr': {'class': 'col-md-12'}}) }}
             </div>
         </div>
-        {#<div class="row">#}
-            {#<div class="col-md-4">#}
-
-                {#<div class="row">#}
-                    {#<div class="col-md-12">#}
-                        {#{{ form_label(form.SalariuMin) }}#}
-                    {#</div>#}
-                    {#<div class="col-md-12">#}
-                        {#{{ form_widget(form.SalariuMin, {'type':'number', 'attr': {'class': 'col-md-12', 'placeholder': 'Aicibagi cati bani vrei minim'}}) }}#}
-                    {#</div>#}
-                {#</div>#}
-            {#</div>#}
-            {#<div class="col-md-4">#}
-                {#<div class="row">#}
-                    {#<div class="col-md-12">#}
-                        {#{{ form_label(form.SalariuMax) }}#}
-                    {#</div>#}
-                    {#<div class="col-md-12">#}
-                        {#{{ form_widget(form.SalariuMax, {'attr': {'class': 'col-md-12'}}) }}#}
-                    {#</div>#}
-
-                {#</div>#}
-            {#</div>#}
-
-
-
         <div class="row">
             <div class="col-md-2 offset-md-10">
-                <button class="btn btn-lg btn-success" id="butonuldesubmit" type="submit">Activeaza</button>
+                <button class="btn btn-lg btn-success" id="butonuldesubmit" type="submit">Adauga</button>
             </div>
 
         </div>
-
 
         {{ form_end(form) }}
     </div>
     <script>
-       /* $(document).ready(function(){
-            $("#butonuldesubmit").click(function(){
-                $(".vreausadisparaasta").hide();
-            });
-        });*/
+
     </script>
-<div class="footer" class="full-width" id="myfooter" >
-
-    <div id="Sitemap" style="display: inline" class="mystyle">
-
-        <a href="/ro/hartasite/joburi" class="text-muted">
-            Site map
-        </a>
-    </div>
-    <div id="Suport" style="display: inline" class="mystyle">
-        <a href="http://support.bestjobs.eu/hc/ro" target="_blank"
-           class="text-muted">Suport</a>
-    </div>
-    <div id="conditii" style="display: inline" class="mystyle">
-        <a href="/ro/legal/terms" class="text-muted">
-            Conditii
-        </a>
-    </div>
-    <div id="confidentialitate" style="display: inline" class="mystyle">
-        <a href="/ro/legal/confidentiality" class="text-muted">
-            Confidentialitate
-        </a>
-    </div>
-    <div id="about" style="display: inline" class="mystyle">
-        <a href="/ro/company/offer#About" class="text-muted"
-           onclick="$('.tab-link[href=\'#About\']', '#offerTypes').click()">
-            Despre noi
-        </a>
-    </div>
-    <div id="blog" style="display: inline" class="mystyle">
-        <a href="http://blog.bestjobs.eu/?lang=ro" target="_blank" class="text-muted">
-            Blog
-        </a>
-    </div>
 
 
-    <div class="col-md-1 col-sm-2 col-xs-12 col-lg-1 text-lg-right text-center lang-links" id="lang-selector"
-         data-locale="ro"
-         style="display: inline">
-        <div class="btn-group dropup">
-            <a href="#" class="btn navbar-btn dropdown-toggle text-muted" data-toggle="dropdown">
-                <img src="https://ss.bestjobs.eu/img/flags/ro.png" class="flag">
-                <small>RO</small>
-                <span class="caret"></span>
-            </a>
-            <ul class="dropdown-menu">
-                <li class="text-lg-left text-center">
-                    <a href="https://www.bestjobs.eu/en/landing/aplicanti-garantati" data-toggle="tooltip"
-                       data-placement="left"
-                       title="engleză">
-                        <img src="https://ss.bestjobs.eu/img/flags/en.png"
-                             class="flag">
-                        <small>EN</small>
-                    </a>
-                </li>
-                <li class="text-lg-left text-center">
-                    <a href="https://www.bestjobs.eu/pl/landing/aplicanti-garantati" data-toggle="tooltip"
-                       data-placement="left"
-                       title="poloneză">
-                        <img src="https://ss.bestjobs.eu/img/flags/pl.png"
-                             class="flag">
-                        <small>PL</small>
-                    </a>
-                </li>
-                <li class="text-lg-left text-center">
-                    <a href="https://www.bestjobs.eu/hu/landing/aplicanti-garantati" data-toggle="tooltip"
-                       data-placement="left"
-                       title="maghiară">
-                        <img src="https://ss.bestjobs.eu/img/flags/hu.png"
-                             class="flag">
-                        <small>HU</small>
-                    </a>
-                </li>
-                <li class="text-lg-left text-center">
-                    <a href="https://www.bestjobs.eu/it/landing/aplicanti-garantati" data-toggle="tooltip"
-                       data-placement="left"
-                       title="italiană">
-                        <img src="https://ss.bestjobs.eu/img/flags/it.png"
-                             class="flag">
-                        <small>IT</small>
-                    </a>
-                </li>
-                <li class="text-lg-left text-center">
-                    <a href="https://www.bestjobs.eu/de/landing/aplicanti-garantati" data-toggle="tooltip"
-                       data-placement="left"
-                       title="germană">
-                        <img src="https://ss.bestjobs.eu/img/flags/de.png"
-                             class="flag">
-                        <small>DE</small>
-                    </a>
-                </li>
-                <li class="text-lg-left text-center">
-                    <a href="https://www.bestjobs.eu/fr/landing/aplicanti-garantati" data-toggle="tooltip"
-                       data-placement="left"
-                       title="franceză">
-                        <img src="https://ss.bestjobs.eu/img/flags/fr.png"
-                             class="flag">
-                        <small>FR</small>
-                    </a>
-                </li>
-                <li class="text-lg-left text-center">
-                    <a href="https://www.bestjobs.eu/sr/landing/aplicanti-garantati" data-toggle="tooltip"
-                       data-placement="left"
-                       title="sârbă">
-                        <img src="https://ss.bestjobs.eu/img/flags/sr.png"
-                             class="flag">
-                        <small>SR</small>
-                    </a>
-                </li>
-                <li class="text-lg-left text-center">
-                    <a href="https://www.bestjobs.eu/es/landing/aplicanti-garantati" data-toggle="tooltip"
-                       data-placement="left"
-                       title="spaniolă">
-                        <img src="https://ss.bestjobs.eu/img/flags/es.png"
-                             class="flag">
-                        <small>ES</small>
-                    </a>
-                </li>
-            </ul>
-        </div>
-    </div>
-    <div class="social">
-        <Form name="socialM" Method="Post">
-
-            <a href="http://twitter.com/BestJobsRo" class="btn btn-twitter navbar-btn"
-               data-toggle="tooltip" title="" data-original-title="Urmareste-ne pe Twitter"
-               id="id_social_media_links">
-                <i class="fab fa-fw fa-lg fa-twitter"></i>
-            </a>
-            <a href="www.youtube.com/user/BestJobsRecrutare" target="_blank"
-               class="btn btn-youtube navbar-btn" data-toggle="tooltip" title=""
-               data-original-title="Urmareste-ne pe YouTube" id="id_social_media_links">
-                <i class="fab fa-fw fa-lg fa-youtube-square"></i>
-            </a>
-            <a href="www.facebook.com" id="facebook" target="_blank"
-               class="btn btn-facebook navbar-btn" data-toggle="tooltip" title=""
-               data-original-title="Urmareste-ne pe Facebook" id="id_social_media_links">
-                <i class="fab fa-fw fa-lg fa-facebook-square"></i>
-            </a>
-            <a href="wwww.linkedin.com" id="linkedin" target="_blank"
-               class="btn btn-linkedin navbar-btn" data-toggle="tooltip" title=""
-               data-original-title="Urmareste-ne pe Linkedin" id="id_social_media_links">
-                <i class="fab fa-fw fa-lg fa-linkedin"></i>
-            </a>
-        </Form>
-    </div>
-
-</div>
-
-
-</body>
-</html>
+{% endblock %}

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Login{% endblock %}</title>
+    {% block stylesheets %}
+
+        <link rel="stylesheet" type="text/css" href="{{ asset('/css/login.css') }}">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css">
+        <link rel="stylesheet"
+              href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css">
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    {% endblock %}
+    <link rel="icon" type="image/x-icon" href="https://ss.bestjobs.eu/favicon.ico">
+
+
+</head>
+<body style="background-color: #F5F5F5">
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12">
+            <h1>Login!</h1>
+            {% if error is defined %}
+                {% if error %}
+                    <div class="alert alert-danger">
+                        {{ error.messageKey|trans(error.messageData, 'security') }}
+                    </div>
+                {% endif %}
+            {% endif %}
+
+            {{ form_start(form) }}
+
+            {{ form_row(form._username) }}
+                {{ form_row(form._password) }}
+
+            {{ form_end(form) }}
+        </div>
+    </div>
+</div>
+
+
+
+<script>
+    $( document ).ready(function() {
+        /*console.log( "ready!" );
+        alert("document is ready");
+        confirm("Press a button!");*/
+        calculateWindowHeight();
+    });
+    $( window ).resize(function() {
+        calculateWindowHeight();
+    });
+    $( window ).on( "orientationchange", function( event ) {
+        calculateWindowHeight();
+    });
+
+    function  calculateWindowHeight() {
+        var documentHeight = $( document ).height();
+        $('#logincontainer').css('min-height', documentHeight);
+    }
+</script>
+
+</body>
+</html>

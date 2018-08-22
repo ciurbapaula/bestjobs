@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>{% block title %}Locuri de munca {% endblock %}</title>
+    <title>{% block title %}Plata pe aplicanti{% endblock %}</title>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     {% block stylesheets %}
@@ -23,12 +23,12 @@
 
 </head>
 <body>
-{% include 'header.html.twig' %}
-<div class="container" id="container-base">
-    {% block body %}{% endblock %}
-</div>
-{% include 'footer.html.twig' %}
-{% block javascripts %}{% endblock %}
+{#{% include 'header.html.twig' %}#}
+{#<div class="container" id="container-base">#}
+    {#{% block body %}{% endblock %}#}
+{#</div>#}
+{#{% include 'footer.html.twig' %}#}
+{#{% block javascripts %}{% endblock %}#}
 <script>
     $( document ).ready(function() {
         /*console.log( "ready!" );

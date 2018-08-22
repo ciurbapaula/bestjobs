@@ -27,7 +27,7 @@ class JobController extends Controller
 {
     /**
      *
-     * @Security("has_role('ROLE_ADMIN')")
+
      *
      * @Route("/newjob", name="newj")
      */
@@ -86,25 +86,25 @@ class JobController extends Controller
      */
     public function listAction(Request $request, $keyword = null)
     {
-        $jobSerach = new JobSearch();
+        $jobSearch = new JobSearch();
         if ($keyword) {
-            $jobSerach->setKeyword($keyword);
+            $jobSearch->setKeyword($keyword);
         }
         /** @var FormInterface $from */
-        $from = $this->createForm(JobSearchType::class, $jobSerach);
+        $from = $this->createForm(JobSearchType::class, $jobSearch);
         $from->handleRequest($request);
 
         /** @var JobRepository $repository */
         $repository = $this->getDoctrine()->getManager()->getRepository(Job::class);
 
-        $jobs =  $repository->getByKeyword($jobSerach->getKeyword());
+        $jobs =  $repository->getByKeyword($jobSearch->getKeyword());
 
         return $this->render(
             'listjob.html.twig',
             [
                 'form' => $from->createView(),
                 'jobs' => $jobs,
-                'keyword' => $jobSerach->getKeyword(),
+                'keyword' => $jobSearch->getKeyword(),
             ]
         );
     }

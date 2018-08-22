@@ -1,0 +1,36 @@
+#logooo{
+   margin-top: 75px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+#logul{
+    background-color: white;
+    width: 300px;
+    margin-top: 30px;
+
+    border: 1px solid lightgray;
+    border-radius: 4px;
+    /*-moz-box-shadow: 2px 7px 8px rgba(0, 0, 0,0.5);*/
+    /*-webkit-box-shadow: 2px 7px 8px rgba(0, 0, 0, .5);*/
+    /*box-shadow: 2px 7px 8px rgba(0, 0, 0, .5);*/
+    padding: 30px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+#mailsirestul{
+
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+#buton{
+    background-color: #6EA50C;
+    border: 3px solid #6EA50C;
+    border-radius: 3px;
+    color: white;width: 120px;
+}

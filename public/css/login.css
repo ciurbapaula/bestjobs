@@ -1,0 +1,36 @@
+
+#logooo{
+    margin-top: 75px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+#logincont{
+    background-color: white;
+    width: 300px;
+    margin-top: 30px;
+
+    border: 1px solid lightgray;
+    border-radius: 4px;
+    /*-moz-box-shadow: 2px 7px 8px rgba(0, 0, 0,0.5);*/
+    /*-webkit-box-shadow: 2px 7px 8px rgba(0, 0, 0, .5);*/
+    /*box-shadow: 2px 7px 8px rgba(0, 0, 0, .5);*/
+    padding: 50px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+#butons{
+    margin-top: 20px;
+    color: white;
+    background-color: #6EA50C;
+    border: 4px solid #6EA50C;
+    border-radius: 2px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}

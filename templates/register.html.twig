@@ -1,0 +1,76 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Creeaza cont{% endblock %}</title>
+    {% block stylesheets %}
+
+        <link rel="stylesheet" type="text/css" href="/css/register.css">
+
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css">
+        <link rel="stylesheet"
+              href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css">
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    {% endblock %}
+    <link rel="icon" type="image/x-icon" href="https://ss.bestjobs.eu/favicon.ico">
+
+
+</head>
+<body style="background-color: #F5F5F5">
+
+
+<div class="contaier" id="log-container">
+
+    <img class="centre" src="https://ss.bestjobs.eu/img/bj-logo-blue.png" id="logooo"  style="height: 40px;width: 200px;align-content:center" alt="bestjobs">
+    <div id="logul">
+
+    {{ form_start(form) }}
+        <br>
+        <div id="mailsirestul">
+            {{ form_row(form.username) }} <br>
+    {{ form_row(form.email) }}<br>
+    {{ form_row(form.plainPassword.first) }}<br>
+    {{ form_row(form.plainPassword.second) }}<br>
+        </div>
+
+
+
+    <button  id="buton" type="submit">Creeaza cont</button>
+
+    {{ form_end(form) }}
+        <br>
+
+    </div>
+
+
+
+
+</div>
+{% block body %}{% endblock %}
+{% block javascripts %}{% endblock %}
+
+
+<script>
+    $( document ).ready(function() {
+        /*console.log( "ready!" );
+        alert("document is ready");
+        confirm("Press a button!");*/
+        calculateWindowHeight();
+    });
+    $( window ).resize(function() {
+        calculateWindowHeight();
+    });
+    $( window ).on( "orientationchange", function( event ) {
+        calculateWindowHeight();
+    });
+
+    function  calculateWindowHeight() {
+        var documentHeight = $( document ).height();
+        $('#log-container').css('min-height', documentHeight);
+    }
+</script>
+</body>
+</html>
